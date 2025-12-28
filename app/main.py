@@ -21,6 +21,6 @@ for key, val in locals().items():
     if isinstance(val, list) or isinstance(val, dict) or isinstance(val, set):
         if key == "sorted_variables":
             continue
-        sorted_variables["mutable"].append(key)
+        sorted_variables["mutable"].append(val)
     else:
-        sorted_variables["immutable"].append(key)
+        sorted_variables["immutable"].append(val)
