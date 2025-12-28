@@ -16,4 +16,11 @@ marks = {
 }
 collection_of_coins = {1, 2, 25}
 
-# write your code here
+sorted_variables = {"mutable": [], "immutable": []}
+for var in locals():
+    if isinstance(var, list) or isinstance(var, dict) or isinstance(var, set):
+        if var == "sorted_variables":
+            continue
+        sorted_variables["mutable"].append(var)
+    else:
+        sorted_variables["immutable"].append(var)
